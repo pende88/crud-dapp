@@ -1,5 +1,5 @@
 {
-  "name": "crud-dapp",
+  "name": "crud",
   "version": "1.0.0",
   "description": "",
   "main": "truffle-config.js",
@@ -7,20 +7,15 @@
     "test": "test"
   },
   "scripts": {
-    "test": "truffle test"
+    "start": "webpack-dev-server"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/pende88/crud-dapp.git"
-  },
-  "author": "Ivan Pende",
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/pende88/crud-dapp/issues"
-  },
-  "homepage": "https://github.com/pende88/crud-dapp#readme",
   "devDependencies": {
-    "webpack": "^5.66.0",
-    "webpack-cli": "^4.9.1"
+    "truffle-hdwallet-provider": "^1.0.17",
+    "web3": "^1.2.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.4.1"
   }
 }

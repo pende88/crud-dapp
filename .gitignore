@@ -105,3 +105,6 @@ dist
 
 #Contracts build
 build/
+
+# connection to infura
+.secrets

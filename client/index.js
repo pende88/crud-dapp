@@ -38,19 +38,19 @@ const initContract = () => {
 };
 
 const initApp = () => {
-    const $create = document.getElementsById('create');
+    const $create = document.getElementById('create');
     const $createResult = document.getElementById('create-result');
 
-    const $read = document.getElementsById('read');
+    const $read = document.getElementById('read');
     const $readResult = document.getElementById('read-result');
 
-    const $edit = document.getElementsById('edit');
+    const $edit = document.getElementById('edit');
     const $editResult = document.getElementById('edit-result');
 
-    const $delete = document.getElementsById('delete');
+    const $delete = document.getElementById('delete');
     const $deleteResult = document.getElementById('delete-result');
 
-    let account = [];
+    let accounts = [];
     web3.eth.getAccounts()
         .then(_accounts => {
             accounts = _accounts;
@@ -101,7 +101,7 @@ const initApp = () => {
         e.preventDefault();
         const id = e.target.elements[0].value;
 
-        crud.methods.delete(id).send({from: accounts[0]})
+        crud.methods.destroy(id).send({from: accounts[0]})
         .then(() => {
             $deleteResult.innerHTML = `The user with id: ${id} was deleted`;
         })
